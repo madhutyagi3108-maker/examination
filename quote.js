@@ -1,0 +1,2 @@
+const Q=["Your only competition is the person you were yesterday.","Uniform is not just an outfit. It is a responsibility.","Service before self.","Discipline is choosing what you want most over what you want now.","The more you sweat in peace, the less you bleed in war.","Leaders are made in the hours nobody watches.","Be the officer your men would follow anywhere."];
+module.exports=(req,res)=>{const d=Math.floor(Date.now()/864e5);res.setHeader('Cache-Control','s-maxage=3600');res.status(200).json({text:Q[d%Q.length]})};
